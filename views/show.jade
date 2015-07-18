@@ -1,4 +1,10 @@
 extends layout
 
 block content
-  h1= title
+ a(href="/countries/"+info._id+"/edit") Edit
+ p=info.name
+ p=info.capital
+ img(src=info.flag)
+ p=info.population
+ form(action="/countries/"+info._id+"/delete", method="post")
+  input(type="submit" value="delete")

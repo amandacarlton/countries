@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  form(action="/countries/"+countries._id, method="post")
+    label(for="name") Country Name
+    input(type="text" id="name" name="name" value=countries.name)
+    p
+    label(for="flag") Flag
+    input(type="text" id="flag" name="flag" value=countries.flag)
+    p
+    label(for="capital") Capital
+    input(type="text" id="capital" name="capital" value=countries.capital)
+    p
+    label(for="population") Population
+    input(type="number" id="population" name="population" value=countries.population)
+    p
+    input(type="submit" id="button" value="Create Country")
